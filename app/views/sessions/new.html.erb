@@ -1,14 +1,14 @@
 <h1>Sign In!</h1>
 <p>Don't have an account? <%= link_to "Sign Up", new_user_path %></p>
 
-  <%= form_for @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f| %>
-    <%= f.label :email %>
+  <%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
+    <label>Email:</label>
 
-    <%= f.text_field :email %>
+    <input name="email" type="text" id="name">
     <br>
-    <%= f.label :password %>
+    <label>Password:</label>
 
-    <%= f.password_field :password %>
+    <input name="password" type="password" id="password">
     <br>
-    <%= f.submit "Sign In" %>
+    <input type="submit" value='Sign In'>
   <% end %>
