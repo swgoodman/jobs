@@ -1,7 +1,7 @@
-<%= form_for(@lead) do |f| %>
-  <label>Post title:</label><br>
+<%= form_for [@user, @lead] do |f| %>
 
   <%= f.hidden_field :user_id %>
+
     <label>Company</label><br>
     <%= f.text_field :company %><br>
     <label>Position</label><br>
