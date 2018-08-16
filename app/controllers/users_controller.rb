@@ -30,6 +30,7 @@ class UsersController < ApplicationController
 
   private
 
+  helper_method :set_user
     def set_user
       @user = User.find(params[:id])
     end

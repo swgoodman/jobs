@@ -9,7 +9,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%= link_to "HOME", root_path %>
-    <%= link_to "ACCOUNT", new_user_path %>
+    <% if current_user %>
+      <%= link_to "ACCOUNT", user_path(current_user) %>
+      <%= link_to "LOGOUT", signout_path, method: :delete %>
+    <% else %>
+      <%= link_to "SIGN IN", signin_path %>
+    <% end %>
   </head>
 
   <body>
