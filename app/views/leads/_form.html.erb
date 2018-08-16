@@ -1,0 +1,10 @@
+<%= form_for(@lead) do |f| %>
+  <label>Post title:</label><br>
+
+  <%= f.hidden_field :user_id %>
+    <label>Company</label><br>
+    <%= f.text_field :company %><br>
+    <label>Position</label><br>
+    <%= f.text_area :position %><br>
+    <%= f.submit %>
+  <% end %>
