@@ -2,7 +2,7 @@
 <h3>Helping you keep organized during your job search.</h3>
 
 <% if current_user %>
-  <% link_to "Dashboard", leads_url(current_user) %>
+  <%= link_to "Dashboard", user_leads_url(session[:user_id]) %>
 <% else %>
   <%= link_to "Sign Up", new_user_path %>
 <% end %>

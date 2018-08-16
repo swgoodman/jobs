@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
   root 'static_pages#home'
-  resources :users
+  resources :users do
+    resources :leads
+  end
   resources :companies
-  resources :leads
+
 
   get '/signin', to: 'sessions#new'
   post '/sessions/create', to: 'sessions#create'
