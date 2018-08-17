@@ -5,6 +5,8 @@
 <p>Leads:</p>
 <% @leads.each do |lead| %>
   <div><%= Company.find_by(id: lead.company_id).name %></div>
+  <div><%= Company.find_by(id: lead.company_id).website %></div>
+  <div><%= Company.find_by(id: lead.company_id).city %></div>
   <div><%= lead.position %></div>
   <div><%= lead.point_person %></div>
   <div><%= lead.phone_number %></div>

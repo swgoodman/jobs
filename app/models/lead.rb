@@ -6,6 +6,7 @@ class Lead < ApplicationRecord
 
   def company_attributes=(company_attributes)
     company = Company.find_or_create_by(name: company_attributes[:name])
+    company.update(company_attributes)
     self.company_id = company.id
   end
 end
