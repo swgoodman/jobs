@@ -3,6 +3,6 @@
 <%= link_to "New Lead", new_user_lead_url(@user) %>
 
 <p>Leads:</p>
-<% @user.leads.each do |lead| %>
-  <div><%= lead.company %></div>
+<% @leads.each do |lead| %>
+  <div><%= lead.email %></div>
 <% end %>
