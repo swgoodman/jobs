@@ -1,9 +1,9 @@
 class LeadsController < ApplicationController
   before_action :set_user
+  before_action :set_lead, only: [:edit, :update, :destroy]
 
   def index
-    if params[:user_id]
-      @user = User.find_by(id: params[:user_id])
+    if current_user
       @leads = @user.leads
     else
       redirect_to root_path
@@ -21,7 +21,7 @@ class LeadsController < ApplicationController
     if @lead.save!
       redirect_to user_leads_url(@user)
     else
-      raise.inspect.params
+      render :new
     end
     # if @lead.save
     #   redirect_to user_leads_url(@user)
@@ -31,7 +31,16 @@ class LeadsController < ApplicationController
   end
 
   def edit
+    set_lead
   end
+
+  def update
+    set_lead
+  end
+
+  def destroy
+  end
+
 
 
   private
@@ -39,6 +48,10 @@ class LeadsController < ApplicationController
   helper_method :set_user
     def set_user
       @user = User.find(session[:user_id])
+    end
+
+    def set_lead
+      @lead = Lead.find(params[:id])
     end
 
     def lead_params
