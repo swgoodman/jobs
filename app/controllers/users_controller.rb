@@ -6,10 +6,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(user_params)
-    if user.save
-      session[:user_id] = user.id
-      redirect_to user_path(user)
+    @user = User.create(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to user_leads_url(@user), notice: "Account Created"
     else
       render :new
     end

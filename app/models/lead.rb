@@ -2,7 +2,7 @@ class Lead < ApplicationRecord
   belongs_to :user
   belongs_to :company
 
-  validates :validates :position, presence: true
+  validates :position, presence: true
   validates :phone_number, numericality: true
 
   accepts_nested_attributes_for :company

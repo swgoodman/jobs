@@ -18,16 +18,11 @@ class LeadsController < ApplicationController
   def create
     @company = Company.create(params[:company_attributes])
     @lead = Lead.create(lead_params)
-    if @lead.save!
+    if @lead.save
       redirect_to user_leads_url(@user)
     else
       render :new
     end
-    # if @lead.save
-    #   redirect_to user_leads_url(@user)
-    # else
-    #   render :new
-    # end
   end
 
   def edit
