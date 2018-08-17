@@ -1,17 +1,4 @@
 <h1>Create an account!</h1>
 <p>Already have an account? <%= link_to "Sign In", signin_path %></p>
 
-  <%= form_for @user do |f| %>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-    <br>
-    <%= f.label :email %>
-
-    <%= f.text_field :email %>
-    <br>
-    <%= f.label :password %>
-
-    <%= f.password_field :password %>
-    <br>
-    <%= f.submit "Create Account" %>
-  <% end %>
+<%= render 'form' %>
