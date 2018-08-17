@@ -3,4 +3,9 @@ class User < ApplicationRecord
 
   has_many :leads
   has_many :companies, through: :leads
+
+  validates :email, uniqueness: { case_sensitive: false }
+  validates :username, uniqueness: { case_sensitive: false }
+  validates :password_confirmation, presence: true
+
 end
