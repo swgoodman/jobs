@@ -12,10 +12,12 @@ class LeadsController < ApplicationController
 
   def new
     @lead = Lead.new(user_id: params[:user_id])
+    @company = Company.new
   end
 
   def create
-    @lead = Lead.new(user_id: params[:user_id], position: params[:position])
+    @company = Company.create(params[:company_attributes])
+    @lead = Lead.create(lead_params)
     if @lead.save!
       redirect_to user_leads_url(@user)
     else
@@ -39,13 +41,14 @@ class LeadsController < ApplicationController
     def lead_params
       params.require(:lead).permit(
         :user_id,
-        :company_id,
         :status,
         :point_person,
         :phone_number,
         :email,
         :position,
         :created_on,
-        :applied_on)
+        :applied_on,
+        company_attributes: [:name, :description, :website, :city]
+      )
     end
 end
