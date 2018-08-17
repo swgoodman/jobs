@@ -36,6 +36,11 @@ class LeadsController < ApplicationController
 
   def update
     set_lead
+    if @lead.update(lead_params)
+      redirect_to user_leads_url(@user)
+    else
+      render :edit
+    end
   end
 
   def destroy

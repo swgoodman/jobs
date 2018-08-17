@@ -5,7 +5,7 @@ class Lead < ApplicationRecord
   accepts_nested_attributes_for :company
 
   def company_attributes=(company_attributes)
-    company = Company.find_or_create_by(company_attributes[:name])
+    company = Company.find_or_create_by(name: company_attributes[:name])
     self.company_id = company.id
   end
 end
