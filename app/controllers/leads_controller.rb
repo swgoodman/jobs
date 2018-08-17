@@ -30,6 +30,9 @@ class LeadsController < ApplicationController
     # end
   end
 
+  def edit
+  end
+
 
   private
 
