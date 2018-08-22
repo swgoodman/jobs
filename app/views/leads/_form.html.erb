@@ -39,7 +39,7 @@
     <%= f.text_field :phone_number %><br>
 
     <label>Status</label><br>
-    <%= f.text_field :status %><br>
+    <%= f.select :status, Lead.options %><br>
 
 
     <%= f.submit %>

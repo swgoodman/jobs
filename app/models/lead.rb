@@ -12,4 +12,14 @@ class Lead < ApplicationRecord
     company.update(company_attributes)
     self.company_id = company.id
   end
+
+  OPTIONS = [
+    {:name => 'Cold', :id => 1},
+    {:name => 'Warm', :id => 2}
+      ]
+
+  def self.options
+    OPTIONS.map{ |option| [option[:name], option[:id]] }
+  end
+
 end
