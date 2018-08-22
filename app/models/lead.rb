@@ -14,12 +14,12 @@ class Lead < ApplicationRecord
   end
 
   OPTIONS = [
-    {:name => 'Cold', :id => 1},
-    {:name => 'Warm', :id => 2}
+    {:name => 'Cold'},
+    {:name => 'Warm'}
       ]
 
   def self.options
-    OPTIONS.map{ |option| [option[:name], option[:id]] }
+    OPTIONS.map{ |option| [option[:name], option[:name]] }
   end
 
 end
