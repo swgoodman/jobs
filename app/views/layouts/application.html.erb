@@ -8,16 +8,24 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%= link_to "HOME", root_path %>
-    <% if current_user %>
-      <%= link_to "ACCOUNT", user_path(current_user) %>
-      <%= link_to "LOGOUT", signout_path, method: :delete %>
-    <% else %>
-      <%= link_to "SIGN IN", signin_path %>
-    <% end %>
-  </head>
+    <nav>
+      <ul>
+        <li><%= link_to root_path do %>
+              <%= image_tag "jobs_logo.png", class: "logo" %>
+            <% end %></li>
+        <% if current_user %>
+          <li><%= link_to "ACCOUNT", user_path(current_user) %></li>
+          <li><%= link_to "LOGOUT", signout_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "SIGN IN", signin_path %></li>
+        <% end %>
+      </ul>
+    </nav>
 
+  </head>
+<div class="content">
   <body>
     <%= yield %>
   </body>
+</div>
 </html>
