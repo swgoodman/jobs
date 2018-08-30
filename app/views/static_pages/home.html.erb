@@ -4,7 +4,7 @@
 <% if current_user %>
   <%= link_to "Dashboard", user_leads_url(session[:user_id]) %>
 <% else %>
-  <%= link_to "SIGN UP", new_user_path, class: "signup" %>
+  <%= link_to "SIGN UP WITH EMAIL", new_user_path, class: "signup" %>
   <br>
   <br>
   <%= link_to(image_tag("github-login.png", class: "github"), '/auth/github') %>
