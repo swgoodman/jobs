@@ -14,14 +14,15 @@
 
 <p>Leads:</p>
 <% @leads.each do |lead| %>
-  <div><%= Company.find_by(id: lead.company_id).name %></div>
-  <div><%= Company.find_by(id: lead.company_id).website %></div>
-  <div><%= Company.find_by(id: lead.company_id).city %></div>
-  <div><%= lead.position %></div>
-  <div><%= lead.point_person %></div>
-  <div><%= lead.phone_number %></div>
-  <div><%= lead.email %></div>
-  <div><%= lead.status %></div>
+  <div>COMPANY: <%= Company.find_by(id: lead.company_id).name %></div>
+  <div>WEBSITE: <%= Company.find_by(id: lead.company_id).website %></div>
+  <div>CITY: <%= Company.find_by(id: lead.company_id).city %></div>
+  <div>POSITION: <%= lead.position %></div>
+  <br>
+  <div>CONTACT PERSON: <%= lead.point_person %></div>
+  <div>PHONE NUMBER: <%= lead.phone_number %></div>
+  <div>EMAIL: <%= lead.email %></div>
+  <div>STATUS: <%= lead.status %></div>
   <div><%= link_to "Edit Lead", edit_user_lead_url(@user, lead) %></div>
 
   <br>
