@@ -102,3 +102,27 @@
   height: 22%;
   width: 22%;
 }
+
+td {
+    padding: 10px;
+}
+
+th {
+    padding: 10px;
+}
+
+table{
+border-collapse:separate;
+border:5px solid #264653;
+border-radius:6px;
+-moz-border-radius:6px;
+}
+
+table td{
+border:1px solid #264653;
+
+}
+
+table th{
+border:1px solid #c6854f;
+}
