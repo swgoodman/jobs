@@ -1,6 +1,4 @@
-<h1>Dashboard</h1>
-
-<%= link_to "New Lead", new_user_lead_url(@user) %>
+<h1>Dashboard</h1> <%= link_to "New Lead", new_user_lead_url(@user) %>
 
 <% if !params[:status].blank? %>
   <% @leads = Lead.where(status: params[:status]) %>
@@ -8,28 +6,40 @@
 
 <h3>Filter Leads:</h3>
 <%= form_tag(user_leads_url(@user), method: "get") do %>
-  <%= select_tag :status, options_for_select(['Warm', 'Cold']), :include_blank => 'All' %>
+  <%= select_tag :status, options_for_select([['Warm', 1],['Cold', 2]]), :include_blank => 'All' %>
   <%= submit_tag "Filter" %>
 <% end %>
 
-<p>Leads:</p>
-<% @leads.each do |lead| %>
-  <div>COMPANY: <%= Company.find_by(id: lead.company_id).name %></div>
-  <div>WEBSITE: <%= Company.find_by(id: lead.company_id).website %></div>
-  <div>CITY: <%= Company.find_by(id: lead.company_id).city %></div>
-  <div>POSITION: <%= lead.position %></div>
-  <br>
-  <div>CONTACT PERSON: <%= lead.point_person %></div>
-  <div>PHONE NUMBER: <%= lead.phone_number %></div>
-  <div>EMAIL: <%= lead.email %></div>
-  <div>STATUS:
-    <% if lead.status == "1" %>
-      <%= "Warm" %>
-    <% else %>
-      <%= "Cold" %>
-    <% end %></div>
-  <div><%= link_to "Edit Lead", edit_user_lead_url(@user, lead) %></div>
 
-  <br>
-  <br>
+
+
+
+<h2>Leads:</h2>
+<table>
+  <tr>
+    <th>COMPANY</th>
+    <th>WEBSITE</th>
+    <th>CITY</th>
+    <th>POSITION</th>
+    <th>CONTACT PERSON</th>
+    <th>PHONE NUMBER</th>
+    <th>STATUS</th>
+  </tr>
+<% @leads.each do |lead| %>
+  <tr>
+    <td><%= Company.find_by(id: lead.company_id).name %></td>
+    <td><%= Company.find_by(id: lead.company_id).website %></td>
+    <td><%= Company.find_by(id: lead.company_id).city %></td>
+    <td><%= lead.position %></td>
+    <td><%= lead.point_person %></td>
+    <td><%= lead.phone_number %></td>
+    <td><%= lead.email %></td>
+    <td><% if lead.status == "1" %>
+          <%= "Warm" %>
+        <% else %>
+          <%= "Cold" %>
+        <% end %>
+    </td>
+    <td><%= link_to "Edit Lead", edit_user_lead_url(@user, lead) %></td>
+  </tr>
 <% end %>
