@@ -1,3 +1,6 @@
+
+<!-- FORM - NEW SESSION -->
+
 <h1>Sign In!</h1>
 
   <%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
@@ -13,5 +16,7 @@
     <br>
     <input type="submit" value='Sign In'>
   <% end %>
+
+<!-- SIGN UP -->
 
   <p>Don't have an account? <%= link_to "Sign Up With Email", new_user_path %> | <%= link_to('Sign In with Github', '/auth/github') %></p>
