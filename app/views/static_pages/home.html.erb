@@ -1,16 +1,21 @@
-
 <!-- HOME -->
 
-<h1>Welcome to Jobs!</h1>
-  <h3>Helping you keep organized during your job search.</h3>
+<h1>Helping you keep organized during your job search.</h1>
 
 <!-- BUTTONS -->
 
-    <% if current_user %>
-      <%= link_to "Dashboard", user_leads_url(session[:user_id]) %>
-    <% else %>
-      <%= link_to "SIGN UP WITH EMAIL", new_user_path, class: "signup" %>
-      <br>
-      <br>
-      <%= link_to(image_tag("github-login.png", class: "github"), '/auth/github') %>
-    <% end %>
+
+<% if current_user %>
+  <div class="button-large">
+    <%= link_to "Dashboard", user_leads_url(session[:user_id]) %>
+  </div>
+
+<% else %>
+  <div class="button-large">
+    <%= link_to "SIGN UP WITH EMAIL", new_user_path, class: "signup" %>
+  </div>
+
+  <div class="button-small">
+    <%= link_to(image_tag("github-login.png", class: "github"), '/auth/github') %>
+  </div>
+<% end %>
