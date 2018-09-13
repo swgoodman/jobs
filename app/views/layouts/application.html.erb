@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html>
 
-<!-- HEADER -->
+  <!-- HEADER -->
 
   <head>
-    <title>Jobs</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <div class="header-content">
+      <title>Jobs - Keeping you organized during your job search.</title>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<!-- NAVIAGTION -->
+<!-- NAVIGATION -->
 
-    <nav>
-      <ul>
-        <li>
-          <%= link_to root_path do %>
-            <%= image_tag "jobs_logo.png", class: "logo" %>
-          <% end %>
-        </li>
+      <nav class="navigation">
+        <ul class="navigation-links">
+
+          <li class="navigation-logo">
+            <%= link_to root_path do %>
+              <%= image_tag "jobs_logo.png", class: "logo" %>
+            <% end %>
+          </li>
+
+          <li class="navigation-page">
+            <%= link_to "HOME", root_path %>
+          </li>
+
           <% if current_user %>
-        <li><%= link_to "ACCOUNT", user_path(current_user) %></li>
-        <li><%= link_to "LOGOUT", signout_path, method: :delete %></li>
+            <li class="navigation-page">
+              <%= link_to "DASHBOARD", user_leads_url(session[:user_id]) %>
+            </li>
+
+            <li class="navigation-page">
+              <%= link_to "ACCOUNT", user_path(current_user) %>
+            </li>
+
+            <li class="navigation-page-session">
+              <%= link_to "LOGOUT", signout_path, method: :delete %>
+            </li>
+
           <% else %>
-        <li><%= link_to "SIGN IN", signin_path, class: "signin"  %></li>
+            <li class="navigation-page-session">
+              <%= link_to "SIGN IN", signin_path, class: "signin" %>
+            </li>
           <% end %>
       </ul>
     </nav>
-  </head>
+  </div>
+</head>
 
 <!-- BODY -->
 
-  <div class="content">
-    <body>
-      <%= yield %>
-    </body>
+<body>
+  <div class="body-content">
+    <%= yield %>
   </div>
+</body>
 </html>
