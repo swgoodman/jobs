@@ -3,20 +3,22 @@
 
 <h1>Sign In!</h1>
 
-  <%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
-    <label>Email:</label>
+  <div class="form-signin">
+    <%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
+      <label>Email:</label>
+      <input name="email" type="text" id="name">
 
-    <input name="email" type="text" id="name">
-    <br>
-    <br>
-    <label>Password:</label>
+      <label>Password:</label>
 
-    <input name="password" type="password" id="password">
-    <br>
-    <br>
-    <input type="submit" value='Sign In'>
-  <% end %>
+      <input name="password" type="password" id="password">
+
+      <input type="submit" value='Sign In'>
+    <% end %>
+  </div>
 
 <!-- SIGN UP -->
 
-  <p>Don't have an account? <%= link_to "Sign Up With Email", new_user_path %> | <%= link_to('Sign In with Github', '/auth/github') %></p>
+  <p class="subtext">
+    Don't have an account?
+    <%= link_to "Sign Up With Email", new_user_path %> | <%= link_to('Sign In with Github', '/auth/github') %>
+  </p>
