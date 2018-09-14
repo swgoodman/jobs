@@ -2,48 +2,43 @@
  /* GLOBAL */
 
   body {
-    background-color: #264653;
-    font-family: Arial, sans-serif;
+    background-color: #122351;
+    font-family: Open Sans, sans-serif;
   }
 
- /* NAVIGATION */
-
-  nav {
-    width: 100%;
-    background-color:#F4A261;
-    box-shadow: 0px 3px #E76F51;
-  }
-
-  nav ul li {
-    display:inline-block;
-    padding: 0;
-  }
-
-  nav a {
+  nav .navigation-links a {
     color: White;
     display:block;
     text-decoration: none;
     padding:20px 30px;
-    font-family: Arial Black, sans-serif;
-    }
-
-  .logo {
-    height: 110%;
-    width:110%;
-    display: inline;
-    margin-right:-300px;
   }
 
-  .signin {
+  nav .navigation-logo {
+    font-family: Baloo Tammudu;
+    font: 80px;
+    color: White;
+    display:inline-block;
+    text-decoration: none;
+  }
+
+  nav .navigation-page {
+    color: White;
+    font: 25px;
+    text-decoration: none;
+    display:inline-block;
+  }
+
+  nav .navigation-page-session {
     color: White;
     display:inline-block;
     text-decoration: none;
     padding:20px 30px;
-    font-family: Arial Black, sans-serif;
     position: absolute;
     right: 8px;
     top: 16px;
   }
+
+ /* NAVIGATION */
 
   nav a:hover {
     background: #C6854F;
@@ -55,7 +50,6 @@
   }
 
   .content {
-
     background-color: white;
     box-shadow: 4px 3px 2px black;
     border-radius: 1px;

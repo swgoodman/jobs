@@ -12,15 +12,13 @@
       <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<!-- NAVIGATION -->
+      <!-- NAVIGATION -->
 
       <nav class="navigation">
         <ul class="navigation-links">
 
           <li class="navigation-logo">
-            <%= link_to root_path do %>
-              <%= image_tag "jobs_logo.png", class: "logo" %>
-            <% end %>
+            <%= link_to "JOBS", root_path %>
           </li>
 
           <li class="navigation-page">
@@ -28,13 +26,15 @@
           </li>
 
           <% if current_user %>
-            <li class="navigation-page">
-              <%= link_to "DASHBOARD", user_leads_url(session[:user_id]) %>
-            </li>
+            <div class="navigation-page">
+              <li>
+                <%= link_to "DASHBOARD", user_leads_url(session[:user_id]) %>
+              </li>
 
-            <li class="navigation-page">
-              <%= link_to "ACCOUNT", user_path(current_user) %>
-            </li>
+              <li class="navigation-page">
+                <%= link_to "ACCOUNT", user_path(current_user) %>
+              </li>
+            </div>
 
             <li class="navigation-page-session">
               <%= link_to "LOGOUT", signout_path, method: :delete %>
@@ -42,19 +42,19 @@
 
           <% else %>
             <li class="navigation-page-session">
-              <%= link_to "SIGN IN", signin_path, class: "signin" %>
+              <%= link_to "SIGN IN", signin_path%>
             </li>
           <% end %>
-      </ul>
-    </nav>
-  </div>
-</head>
+        </ul>
+      </nav>
+    </div>
+  </head>
 
-<!-- BODY -->
+  <!-- BODY -->
 
-<body>
-  <div class="body-content">
-    <%= yield %>
-  </div>
-</body>
+  <body>
+    <div class="body-content">
+      <%= yield %>
+    </div>
+  </body>
 </html>
