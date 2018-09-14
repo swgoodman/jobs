@@ -1,11 +1,12 @@
 
 <!-- FORM - NEW LEAD -->
 
-<%= form_for [@user, @lead] do |f| %>
+<div class="form">
+  <%= form_for [@user, @lead] do |f| %>
 
 <!-- ERRORS -->
 
-  <div id="error_explanation">
+  <div class="error">
     <% if @lead.errors.any? %>
 
       <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -20,41 +21,42 @@
 
 <!-- COMPANY INFORMATION -->
 
-  <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :user_id %>
 
-    <%= f.fields_for :company, @company do |company_field| %>
+      <%= f.fields_for :company, @company do |company_field| %>
 
-      <label>Company</label><br>
-      <%= company_field.text_field :name %><br>
+        <label>Company</label><br>
+        <%= company_field.text_field :name %><br>
 
-      <label>Description</label><br>
-      <%= company_field.text_field :description %><br>
+        <label>Description</label><br>
+        <%= company_field.text_field :description %><br>
 
-      <label>Website</label><br>
-      <%= company_field.text_field :website %><br>
+        <label>Website</label><br>
+        <%= company_field.text_field :website %><br>
 
-      <label>City</label><br>
-      <%= company_field.text_field :city %><br>
+        <label>City</label><br>
+        <%= company_field.text_field :city %><br>
 
-    <% end %>
+      <% end %>
 
 <!-- POSITION INFORMATION -->
 
-  <label>Position</label><br>
-  <%= f.text_field :position %><br>
+    <label>Position</label><br>
+    <%= f.text_field :position %><br>
 
-  <label>Point Person</label><br>
-  <%= f.text_field :point_person %><br>
+    <label>Point Person</label><br>
+    <%= f.text_field :point_person %><br>
 
-  <label>Email</label><br>
-  <%= f.email_field :email %><br>
+    <label>Email</label><br>
+    <%= f.email_field :email %><br>
 
-  <label>Phone Number</label><br>
-  <%= f.text_field :phone_number %><br>
+    <label>Phone Number</label><br>
+    <%= f.text_field :phone_number %><br>
 
-  <label>Status</label><br>
-  <%= f.select :status, Lead.options %><br>
+    <label>Status</label><br>
+    <%= f.select :status, Lead.options %><br>
 
 
-  <%= f.submit %>
-<% end %>
+    <%= f.submit %>
+  <% end %>
+</div>
