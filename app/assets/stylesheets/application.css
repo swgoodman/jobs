@@ -8,16 +8,15 @@
 
   nav .navigation-links a {
     color: White;
-    display:block;
     text-decoration: none;
-    padding:20px 30px;
+    padding:40px 30px;
   }
 
   nav .navigation-logo {
     font-family: Baloo Tammudu;
-    font: 80px;
+    font: 180px;
     color: White;
-    display:inline-block;
+    display: inline-block;
     text-decoration: none;
   }
 
@@ -28,28 +27,26 @@
     display:inline-block;
   }
 
+  nav .navigation-page a:hover {
+    text-decoration: underline;
+  }
+
   nav .navigation-page-session {
     color: White;
     display:inline-block;
     text-decoration: none;
-    padding:20px 30px;
     position: absolute;
     right: 8px;
-    top: 16px;
+    top: 40px;
+  }
+
+  nav .navigation-page-session a:hover {
+    text-decoration: underline;
   }
 
  /* NAVIGATION */
 
-  nav a:hover {
-    background: #C6854F;
-  }
-
-  .menu-trigger {
-    display:none;
-    color:#F8ECC2;
-  }
-
-  .content {
+  /* .content {
     background-color: white;
     box-shadow: 4px 3px 2px black;
     border-radius: 1px;
@@ -57,7 +54,7 @@
     padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 40px;
-  }
+  } */
 
  /* BUTTONS */
 
