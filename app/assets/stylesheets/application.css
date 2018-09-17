@@ -42,12 +42,40 @@
     text-decoration: none;
     position: absolute;
     right: 8px;
-    top: 95px;
+    top: 93px;
   }
 
   .navigation-page-session a:hover {
     text-decoration: underline;
   }
+
+  hr {
+      top: auto;
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 3px solid #ccc;
+      margin-top: -85px;
+      opacity: 0.3;
+  }
+
+ /* IMAGES */
+
+ .image_home {
+   position: absolute;
+   display: inline-block;
+   width: 538px;
+   height: 359px;
+   left: 510px;
+   top: 343px;
+ }
+
+ /* PAGE TITLES */
+
+ .home_title {
+   display: inline-block;
+   color: white;
+ }
 
  /* BUTTONS */
 
