@@ -6,55 +6,48 @@
     font-family: Open Sans, sans-serif;
   }
 
-  nav .navigation-links a {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .navigation-links a {
     color: White;
     text-decoration: none;
     padding:40px 30px;
   }
 
-  nav .navigation-logo {
+  .navigation-logo {
     font-family: Baloo Tammudu;
-    font: 180px;
+    font-size: 80px;
     color: White;
     display: inline-block;
     text-decoration: none;
   }
 
-  nav .navigation-page {
+  .navigation-page {
     color: White;
     font: 25px;
     text-decoration: none;
     display:inline-block;
   }
 
-  nav .navigation-page a:hover {
+  .navigation-page a:hover {
     text-decoration: underline;
   }
 
-  nav .navigation-page-session {
+  .navigation-page-session {
     color: White;
     display:inline-block;
     text-decoration: none;
     position: absolute;
     right: 8px;
-    top: 40px;
+    top: 95px;
   }
 
-  nav .navigation-page-session a:hover {
+  .navigation-page-session a:hover {
     text-decoration: underline;
   }
-
- /* NAVIGATION */
-
-  /* .content {
-    background-color: white;
-    box-shadow: 4px 3px 2px black;
-    border-radius: 1px;
-    padding-top: 20px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 40px;
-  } */
 
  /* BUTTONS */
 
