@@ -26,15 +26,13 @@
           </li>
 
           <% if current_user %>
-            <div class="navigation-page">
-              <li>
+              <li class="navigation-page">
                 <%= link_to "DASHBOARD", user_leads_url(session[:user_id]) %>
               </li>
 
               <li class="navigation-page">
                 <%= link_to "ACCOUNT", user_path(current_user) %>
               </li>
-            </div>
 
             <li class="navigation-page-session">
               <%= link_to "LOGOUT", signout_path, method: :delete %>

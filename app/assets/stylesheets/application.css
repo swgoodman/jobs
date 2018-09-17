@@ -11,32 +11,41 @@
     margin: 0 auto;
   }
 
-  .navigation-links a {
-    color: White;
-    text-decoration: none;
-    padding:40px 30px;
-  }
+ /* FONTS */
+
+ * {
+   color: white;
+ }
+
+ /* NAVIGATION */
 
   .navigation-logo {
     font-family: Baloo Tammudu;
     font-size: 80px;
     color: White;
     display: inline-block;
+  }
+
+  .navigation-logo a {
     text-decoration: none;
   }
 
   .navigation-page {
     color: White;
-    font: 25px;
+    padding:40px 30px;
+    list-style: none;
+    display: inline-block;
+  }
+
+  .navigation-page a {
     text-decoration: none;
-    display:inline-block;
   }
 
   .navigation-page a:hover {
     text-decoration: underline;
   }
 
-  .navigation-page-session {
+  .navigation-page-session a {
     color: White;
     display:inline-block;
     text-decoration: none;
@@ -62,12 +71,12 @@
  /* IMAGES */
 
  .image_home {
-   position: absolute;
+   position: relative;
    display: inline-block;
-   width: 538px;
-   height: 359px;
-   left: 510px;
-   top: 343px;
+   width: 60%;
+   height: 60%;
+   left: 20px;
+   top: 5px;
  }
 
  /* PAGE TITLES */
@@ -79,12 +88,19 @@
 
  /* BUTTONS */
 
- .signup {
-	background-color:#f4a361;
+ .home_buttons {
+   display: inline-block;
+   float: left;
+   text-decoration: none;
+   list-style: none;
+ }
+
+ .home_button {
+	background-color:#488286;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
-	border:1px solid #f4a361;
+	border:1px solid #488286;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
@@ -92,10 +108,17 @@
 	font-weight:semibold;
 	padding:11px 23px;
 	text-decoration:none;
+  display: inline-block;
+ }
+
+ .github {
+  height: 34px;
+  width: auto;
+  padding-top: 25px;
  }
 
  .signup:hover {
-	background-color:#c6854f;
+	background-color:#62AFB4;
  }
 
  .signup:active {
@@ -103,10 +126,10 @@
 	top:1px;
  }
 
- .github {
-  height: 34px;
-  width: auto;
- }
+ .submit_button {
+    color: black;
+}
+
 
  /* TABLES */
 
@@ -132,4 +155,13 @@
 
  table th{
   border:1px solid #c6854f;
+ }
+
+ /* FILTER */
+
+ .filter {
+   position: relative;
+   float: right;
+   top: -80px;
+   display: inline-block;
  }

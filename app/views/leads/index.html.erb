@@ -4,7 +4,7 @@
 <h1>Dashboard</h1>
 
   <div class="button-large">
-    <%= link_to "New Lead", new_user_lead_url(@user) %>
+    <%= link_to "New Lead", new_user_lead_url(@user), class: "home_button" %>
   </div>
 <!-- FILTER LEADS -->
 
@@ -16,7 +16,7 @@
     <h3>Filter Leads:</h3>
       <%= form_tag(user_leads_url(@user), method: "get") do %>
         <%= select_tag :status, options_for_select([['Warm', 1],['Cold', 2]]), :include_blank => 'All' %>
-        <%= submit_tag "Filter" %>
+        <%= submit_tag "Filter", class: "submit_button"  %>
       <% end %>
   </div>
 <!-- LEADS -->
