@@ -23,9 +23,13 @@
 
     <%= f.hidden_field :user_id %>
 
+        <label>Existing Company:</label><br>
+        <%= f.collection_select(:company_id, @user.companies.all, :id, :name, include_blank: 'Select an existing Company here or make a new one below') %>
+        <br>
+        <br>
       <%= f.fields_for :company, @company do |company_field| %>
 
-        <label>Company</label><br>
+        <label>New Company:</label><br>
         <%= company_field.text_field :name %><br>
 
         <label>Description</label><br>
@@ -38,6 +42,8 @@
         <%= company_field.text_field :city %><br>
 
       <% end %>
+      <br>
+      <br>
 
 <!-- POSITION INFORMATION -->
 
