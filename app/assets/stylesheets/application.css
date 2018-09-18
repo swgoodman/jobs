@@ -17,6 +17,10 @@
    color: white;
  }
 
+ input, select, textarea{
+    color: #000;
+}
+
  /* NAVIGATION */
 
   .navigation-logo {
@@ -50,7 +54,7 @@
     display:inline-block;
     text-decoration: none;
     position: absolute;
-    right: 8px;
+    right: 20px;
     top: 93px;
   }
 
@@ -64,7 +68,7 @@
       height: 1px;
       border: 0;
       border-top: 3px solid #ccc;
-      margin-top: -85px;
+      margin-top: -90px;
       opacity: 0.3;
   }
 
