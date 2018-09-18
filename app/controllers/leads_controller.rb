@@ -16,8 +16,15 @@ class LeadsController < ApplicationController
   end
 
   def create
-    @company = Company.create(params[:company_attributes])
-    @lead = Lead.create(lead_params)
+
+    if params[:lead][:company_id].present?
+      @company = Company.find_by(id: params[:lead][:company_id])
+      @lead = Lead.create(existing_lead_params)
+    else
+      @company = Company.create(params[:company_attributes])
+      @lead = Lead.create(lead_params)
+    end
+
     if @lead.save
       redirect_to user_leads_url(@user)
     else
@@ -67,6 +74,20 @@ class LeadsController < ApplicationController
         :created_on,
         :applied_on,
         company_attributes: [:name, :description, :website, :city]
+      )
+    end
+
+    def existing_lead_params
+      params.require(:lead).permit(
+        :user_id,
+        :status,
+        :point_person,
+        :phone_number,
+        :email,
+        :position,
+        :created_on,
+        :applied_on,
+        :company_id
       )
     end
 end

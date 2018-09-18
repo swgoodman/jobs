@@ -24,7 +24,7 @@
     <%= f.hidden_field :user_id %>
 
         <label>Existing Company:</label><br>
-        <%= f.collection_select(:company_id, @user.companies.all, :id, :name, include_blank: 'Select an existing Company here or make a new one below') %>
+        <%= f.collection_select(:company_id, @user.companies.all.uniq, :id, :name, include_blank: 'Select an existing Company or make a new one below') %>
         <br>
         <br>
       <%= f.fields_for :company, @company do |company_field| %>
