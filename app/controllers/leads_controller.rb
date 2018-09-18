@@ -13,6 +13,7 @@ class LeadsController < ApplicationController
   def new
     @lead = Lead.new(user_id: params[:user_id])
     @company = Company.new
+    @user = User.find_by(params[:user_id])
   end
 
   def create
