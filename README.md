@@ -9,8 +9,8 @@
   <ol>
     <li>Fork and Clone the Repo</li>
     <li>Run migrations</li>
-    <li>Boot up a server, I recommend `Rails s -p 5212`</li>
-    <li>Head to `localhost:5212` in your favorite browser</li>
+    <li>Boot up a server, I recommend ```Rails s -p 5212```</li>
+    <li>Head to "localhost:5212" in your favorite browser</li>
     <li>Network, Learn, Network, Learn, Interview, Interview, Interview, Get Hired!</li>
   </ol>
 
