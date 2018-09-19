@@ -45,6 +45,12 @@ class LeadsController < ApplicationController
     end
   end
 
+  def search
+    #receive the param of the search
+    @leads = current_user.leads.search(params[:search])
+
+  end
+
   def destroy
     @lead.destroy
     redirect_to user_leads_url(@user)

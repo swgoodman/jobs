@@ -13,4 +13,8 @@ Rails.application.routes.draw do
 
   get '/auth/github/callback' => 'sessions#create_oath'
 
+  get '/web_dev' => 'leads#web_dev'
+
+  get '/search' => 'leads#search'
+
 end

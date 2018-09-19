@@ -41,7 +41,7 @@
 
   <!-- TABLE ROWS -->
 
-        <% @leads.each do |lead| %>
+        <% current_user.leads.each do |lead| %>
           <tr class="table-data">
             <td><%= Company.find_by(id: lead.company_id).name %></td>
             <td><%= Company.find_by(id: lead.company_id).website  %></td>

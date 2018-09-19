@@ -7,7 +7,7 @@ class Lead < ApplicationRecord
 
   accepts_nested_attributes_for :company
 
-  scope :web_dev, -> { where(position: "Web Developer") }
+    scope :search, ->(search_term) { where("position == ?", search_term) }
 
   def company_attributes=(company_attributes)
     company = Company.find_or_create_by(name: company_attributes[:name])
