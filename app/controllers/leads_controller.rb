@@ -47,8 +47,11 @@ class LeadsController < ApplicationController
 
   def search
     #receive the param of the search
-    @leads = current_user.leads.search(params[:search])
-
+    if params[:search]
+      @leads = current_user.leads.search(params[:search])
+    else
+      @leads = current_user.leads
+    end
   end
 
   def destroy
