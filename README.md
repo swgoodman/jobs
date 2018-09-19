@@ -1,24 +1,11 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h1>Jobs</h1>
 
-Things you may want to cover:
 
-* Ruby version
+Jobs is a Rails based web application designed to help job seekers keep track of leads as they network and interview.
 
-* System dependencies
+Motivation
+A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Build status
+Build status of continus integration i.e. travis, appveyor etc. Ex. -
