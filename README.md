@@ -1,10 +1,15 @@
 
 <h1>Jobs</h1>
+
+### Description
+
   Jobs is a Rails based web application designed to help job seekers keep track of leads as they network and interview.
+  
+  I always want to create projects that are used by someone. Whether it is just me or 200,000 active users, programs aren't helpful simply sitting in a github repo. I'm confident Jobs will help me navigate my upcoming job search and believe it can help others too.
+  
   <a target="_blank" href="https://streamable.com/czeh6">Watch Demo</a>
 
-<h3>Motivation</h3>
-  I always want to create projects that are used by someone. Whether it is just me or 200,000 active users, programs aren't helpful simply sitting in a github repo. I'm confident Jobs will help me navigate my upcoming job search and believe it can help others too.
+  
 
 ### Installation Guide
   <ol>
