@@ -1,5 +1,5 @@
 
-<h1>Jobs <img src="https://media.giphy.com/media/VAOP4be4s9H9K/giphy.gif" height="70" width="70"></h1>
+<h1>Jobs <img src="https://media.giphy.com/media/VAOP4be4s9H9K/giphy.gif" height="70"></h1>
 
 ### Description
 
