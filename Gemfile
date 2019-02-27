@@ -19,7 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 #SELF ADDED
 gem 'omniauth'
 gem 'omniauth-github'
-gem 'dotenv-rails'
+gem 'dotenv-rails', :groups => [:development, :test, :production]
 gem 'thin'
 gem 'pry'
 
