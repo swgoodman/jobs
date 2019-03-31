@@ -8,18 +8,20 @@
   </div>
 <!-- FILTER LEADS -->
 
-  # <div class="filter">
-  #   <% if !params[:status].blank? %>
-  #     <% @leads = Lead.where(status: params[:status]) %>
-  #   <% end %>
+<% if false %>
+  <div class="filter">
+    <% if !params[:status].blank? %>
+      <% @leads = Lead.where(status: params[:status]) %>
+    <% end %>
 
-  #   <h3>Filter Leads:</h3>
-  #     <%= form_tag(user_leads_url(@user), method: "get") do %>
-  #       <%= select_tag :status, options_for_select([['Warm', 1],['Cold', 2]]), :include_blank => 'All' %>
-  #       <%= submit_tag "Filter", class: "submit_button"  %>
-  #     <% end %>
-  # </div>
-  
+    <h3>Filter Leads:</h3>
+      <%= form_tag(user_leads_url(@user), method: "get") do %>
+        <%= select_tag :status, options_for_select([['Warm', 1],['Cold', 2]]), :include_blank => 'All' %>
+        <%= submit_tag "Filter", class: "submit_button"  %>
+      <% end %>
+  </div>
+<% end %>
+
 <!-- LEADS -->
 
   <h2>Leads:</h2>
