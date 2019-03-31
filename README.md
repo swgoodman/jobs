@@ -7,7 +7,7 @@
   
   I always want to create projects that are used by someone. Whether it is just me or 200,000 active users, programs aren't helpful simply sitting in a github repo. I'm confident Jobs will help me navigate my upcoming job search and believe it can help others too.
   
-  <a rel="noopener noreferrer" href="https://jobs-sealthedeal.herokuapp.com/" target="_blank">Heroku Demo</a>
+  <a target="_blank" href="https://jobs-sealthedeal.herokuapp.com/">Heroku Demo</a>
 
   
 
