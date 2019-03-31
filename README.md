@@ -15,20 +15,20 @@
   <ol>
     <li>Fork and Clone the Repo</li>
     <li>Bundle Gems and run migrations</li>
-    <li>Boot up a server, I recommend 'Rails s -p 5212'</li>
+    <li>Boot up a server, Ie 'Rails s -p 5212'</li>
     <li>Head to "localhost:5212" in your favorite browser</li>
     <li>Network, Learn, Network, Learn, Interview, Interview, Interview, Get Hired!</li>
   </ol>
 
 ### Contributor's Guide
 
-If you are having trouble with In the Wav, or have an idea to make it better I'd love to hear from you. Please file an Issue with a PR or simply an Issue. 
+If you are having trouble with Jobs, or have an idea to make it better I'd love to hear from you. Please file an Issue with a PR or simply an Issue. 
 
 ### Licensing
 
 ###### MIT License
 
-Copyright (c) 2018 SWG
+Copyright (c) 2019 SWG
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
